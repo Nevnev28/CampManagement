@@ -38,14 +38,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Logout = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.CamperInfo = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.Add = new System.Windows.Forms.Button();
             this.UpdateCamper = new System.Windows.Forms.Button();
             this.DelCamper = new System.Windows.Forms.Button();
+            this.SearchBar = new System.Windows.Forms.TextBox();
+            this.Search = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CamperInfo)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -173,15 +176,16 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "View Camper";
             // 
-            // dataGridView1
+            // CamperInfo
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(256, 173);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1168, 716);
-            this.dataGridView1.TabIndex = 3;
+            this.CamperInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CamperInfo.Location = new System.Drawing.Point(256, 173);
+            this.CamperInfo.Name = "CamperInfo";
+            this.CamperInfo.RowHeadersWidth = 82;
+            this.CamperInfo.RowTemplate.Height = 33;
+            this.CamperInfo.Size = new System.Drawing.Size(1292, 716);
+            this.CamperInfo.TabIndex = 3;
+            this.CamperInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // tableLayoutPanel3
             // 
@@ -190,7 +194,7 @@
             this.tableLayoutPanel3.Controls.Add(this.DelCamper, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.UpdateCamper, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.Add, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(1453, 263);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(1580, 258);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -222,6 +226,7 @@
             this.UpdateCamper.TabIndex = 6;
             this.UpdateCamper.Text = "Update Camper";
             this.UpdateCamper.UseVisualStyleBackColor = true;
+            this.UpdateCamper.Click += new System.EventHandler(this.UpdateCamper_Click);
             // 
             // DelCamper
             // 
@@ -234,6 +239,36 @@
             this.DelCamper.TabIndex = 6;
             this.DelCamper.Text = "Delete Camper";
             this.DelCamper.UseVisualStyleBackColor = true;
+            this.DelCamper.Click += new System.EventHandler(this.DelCamper_Click);
+            // 
+            // SearchBar
+            // 
+            this.SearchBar.Location = new System.Drawing.Point(256, 124);
+            this.SearchBar.Name = "SearchBar";
+            this.SearchBar.Size = new System.Drawing.Size(329, 31);
+            this.SearchBar.TabIndex = 5;
+            this.SearchBar.TextChanged += new System.EventHandler(this.SearchBar_TextChanged);
+            // 
+            // Search
+            // 
+            this.Search.AutoSize = true;
+            this.Search.Font = new System.Drawing.Font("Century Gothic", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search.Location = new System.Drawing.Point(256, 93);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(83, 25);
+            this.Search.TabIndex = 6;
+            this.Search.Text = "Search";
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(1436, 119);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(112, 41);
+            this.button6.TabIndex = 8;
+            this.button6.Text = "Refresh";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // ViewCamper
             // 
@@ -242,8 +277,11 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1792, 924);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.Search);
+            this.Controls.Add(this.SearchBar);
             this.Controls.Add(this.tableLayoutPanel3);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.CamperInfo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -255,7 +293,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CamperInfo)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -273,10 +311,13 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView CamperInfo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button DelCamper;
         private System.Windows.Forms.Button UpdateCamper;
         private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.TextBox SearchBar;
+        private System.Windows.Forms.Label Search;
+        private System.Windows.Forms.Button button6;
     }
 }
