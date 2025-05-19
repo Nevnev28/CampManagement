@@ -40,9 +40,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.CamperInfo = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.Add = new System.Windows.Forms.Button();
-            this.UpdateCamper = new System.Windows.Forms.Button();
             this.DelCamper = new System.Windows.Forms.Button();
+            this.UpdateCamper = new System.Windows.Forms.Button();
+            this.Add = new System.Windows.Forms.Button();
             this.SearchBar = new System.Windows.Forms.TextBox();
             this.Search = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
@@ -97,7 +97,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(222, 56);
             this.button4.TabIndex = 4;
-            this.button4.Text = "Profile";
+            this.button4.Text = "Generate Report";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -203,6 +203,32 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 288);
             this.tableLayoutPanel3.TabIndex = 4;
             // 
+            // DelCamper
+            // 
+            this.DelCamper.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DelCamper.Font = new System.Drawing.Font("Century Gothic", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DelCamper.Location = new System.Drawing.Point(3, 193);
+            this.DelCamper.Name = "DelCamper";
+            this.DelCamper.Size = new System.Drawing.Size(194, 44);
+            this.DelCamper.TabIndex = 6;
+            this.DelCamper.Text = "Delete Camper";
+            this.DelCamper.UseVisualStyleBackColor = true;
+            this.DelCamper.Click += new System.EventHandler(this.DelCamper_Click);
+            // 
+            // UpdateCamper
+            // 
+            this.UpdateCamper.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.UpdateCamper.Font = new System.Drawing.Font("Century Gothic", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateCamper.Location = new System.Drawing.Point(3, 98);
+            this.UpdateCamper.Name = "UpdateCamper";
+            this.UpdateCamper.Size = new System.Drawing.Size(194, 44);
+            this.UpdateCamper.TabIndex = 6;
+            this.UpdateCamper.Text = "Update Camper";
+            this.UpdateCamper.UseVisualStyleBackColor = true;
+            this.UpdateCamper.Click += new System.EventHandler(this.UpdateCamper_Click);
+            // 
             // Add
             // 
             this.Add.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -214,32 +240,7 @@
             this.Add.TabIndex = 5;
             this.Add.Text = "Add Camper";
             this.Add.UseVisualStyleBackColor = true;
-            // 
-            // UpdateCamper
-            // 
-            this.UpdateCamper.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.UpdateCamper.Font = new System.Drawing.Font("Century Gothic", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateCamper.Location = new System.Drawing.Point(3, 99);
-            this.UpdateCamper.Name = "UpdateCamper";
-            this.UpdateCamper.Size = new System.Drawing.Size(194, 44);
-            this.UpdateCamper.TabIndex = 6;
-            this.UpdateCamper.Text = "Update Camper";
-            this.UpdateCamper.UseVisualStyleBackColor = true;
-            this.UpdateCamper.Click += new System.EventHandler(this.UpdateCamper_Click);
-            // 
-            // DelCamper
-            // 
-            this.DelCamper.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DelCamper.Font = new System.Drawing.Font("Century Gothic", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DelCamper.Location = new System.Drawing.Point(3, 195);
-            this.DelCamper.Name = "DelCamper";
-            this.DelCamper.Size = new System.Drawing.Size(194, 44);
-            this.DelCamper.TabIndex = 6;
-            this.DelCamper.Text = "Delete Camper";
-            this.DelCamper.UseVisualStyleBackColor = true;
-            this.DelCamper.Click += new System.EventHandler(this.DelCamper_Click);
+            this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // SearchBar
             // 

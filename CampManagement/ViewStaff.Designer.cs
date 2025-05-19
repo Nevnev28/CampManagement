@@ -38,8 +38,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Logout = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.StaffInfo = new System.Windows.Forms.DataGridView();
+            this.Search = new System.Windows.Forms.Label();
+            this.SearchBar = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.DelCamper = new System.Windows.Forms.Button();
+            this.UpdateCamper = new System.Windows.Forms.Button();
+            this.Add = new System.Windows.Forms.Button();
+            this.StaffRole = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StaffInfo)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StaffRole)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -87,7 +100,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(222, 56);
             this.button4.TabIndex = 4;
-            this.button4.Text = "Profile";
+            this.button4.Text = "Generate Report";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -166,6 +179,123 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "View Staff";
             // 
+            // StaffInfo
+            // 
+            this.StaffInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StaffInfo.Location = new System.Drawing.Point(256, 181);
+            this.StaffInfo.Name = "StaffInfo";
+            this.StaffInfo.RowHeadersWidth = 82;
+            this.StaffInfo.RowTemplate.Height = 33;
+            this.StaffInfo.Size = new System.Drawing.Size(1140, 716);
+            this.StaffInfo.TabIndex = 4;
+            this.StaffInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CamperInfo_CellContentClick);
+            // 
+            // Search
+            // 
+            this.Search.AutoSize = true;
+            this.Search.Font = new System.Drawing.Font("Century Gothic", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search.Location = new System.Drawing.Point(256, 105);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(83, 25);
+            this.Search.TabIndex = 10;
+            this.Search.Text = "Search";
+            // 
+            // SearchBar
+            // 
+            this.SearchBar.Location = new System.Drawing.Point(256, 136);
+            this.SearchBar.Name = "SearchBar";
+            this.SearchBar.Size = new System.Drawing.Size(329, 31);
+            this.SearchBar.TabIndex = 9;
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(1284, 126);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(112, 41);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "Refresh";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.DelCamper, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.UpdateCamper, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.Add, 0, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(1435, 181);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 227);
+            this.tableLayoutPanel3.TabIndex = 12;
+            // 
+            // DelCamper
+            // 
+            this.DelCamper.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DelCamper.Font = new System.Drawing.Font("Century Gothic", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DelCamper.Location = new System.Drawing.Point(3, 153);
+            this.DelCamper.Name = "DelCamper";
+            this.DelCamper.Size = new System.Drawing.Size(194, 44);
+            this.DelCamper.TabIndex = 6;
+            this.DelCamper.Text = "Delete Camper";
+            this.DelCamper.UseVisualStyleBackColor = true;
+            this.DelCamper.Click += new System.EventHandler(this.DelCamper_Click);
+            // 
+            // UpdateCamper
+            // 
+            this.UpdateCamper.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.UpdateCamper.Font = new System.Drawing.Font("Century Gothic", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateCamper.Location = new System.Drawing.Point(3, 78);
+            this.UpdateCamper.Name = "UpdateCamper";
+            this.UpdateCamper.Size = new System.Drawing.Size(194, 44);
+            this.UpdateCamper.TabIndex = 6;
+            this.UpdateCamper.Text = "Update Camper";
+            this.UpdateCamper.UseVisualStyleBackColor = true;
+            this.UpdateCamper.Click += new System.EventHandler(this.UpdateCamper_Click);
+            // 
+            // Add
+            // 
+            this.Add.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Add.Font = new System.Drawing.Font("Century Gothic", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add.Location = new System.Drawing.Point(3, 3);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(194, 44);
+            this.Add.TabIndex = 5;
+            this.Add.Text = "Add Camper";
+            this.Add.UseVisualStyleBackColor = true;
+            // 
+            // StaffRole
+            // 
+            this.StaffRole.AllowUserToAddRows = false;
+            this.StaffRole.AllowUserToDeleteRows = false;
+            this.StaffRole.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.StaffRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StaffRole.Location = new System.Drawing.Point(1435, 483);
+            this.StaffRole.Name = "StaffRole";
+            this.StaffRole.RowHeadersWidth = 82;
+            this.StaffRole.RowTemplate.Height = 33;
+            this.StaffRole.Size = new System.Drawing.Size(331, 414);
+            this.StaffRole.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1429, 429);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(157, 36);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Staff Roles";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // ViewStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -173,6 +303,13 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1792, 924);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.StaffRole);
+            this.Controls.Add(this.tableLayoutPanel3);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.Search);
+            this.Controls.Add(this.SearchBar);
+            this.Controls.Add(this.StaffInfo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -184,6 +321,9 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StaffInfo)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.StaffRole)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,5 +340,15 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView StaffInfo;
+        private System.Windows.Forms.Label Search;
+        private System.Windows.Forms.TextBox SearchBar;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button DelCamper;
+        private System.Windows.Forms.Button UpdateCamper;
+        private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.DataGridView StaffRole;
+        private System.Windows.Forms.Label label3;
     }
 }

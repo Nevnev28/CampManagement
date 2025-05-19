@@ -83,7 +83,9 @@ namespace CampManagement
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            ViewStaff viewStaff = new ViewStaff();
+            viewStaff.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -208,6 +210,13 @@ namespace CampManagement
 
         private void button6_Click(object sender, EventArgs e)
         {
+            LoadCamper();
+        }
+
+        private void Add_Click(object sender, EventArgs e)
+        {
+            AddCamper addCamper = new AddCamper();
+            addCamper.Show();
             LoadCamper();
         }
     }
